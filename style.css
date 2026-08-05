@@ -1,39 +1,27 @@
 body {
-
     max-width:900px;
-
     margin:auto;
-
     font-family:
     Arial, sans-serif;
-
     background:#f4f4f4;
-
 }
-
 
 h1 {
-
     text-align:center;
-
     color:#333;
-
 }
-
 
 h2 {
-
     border-left:5px solid #3498db;
-
     padding-left:10px;
-
 }
 
+h3 {
+    border-left:5px solid #6f7172;
+    padding-left:10px;
+}
 
 p {
-
     line-height:1.8;
-
     font-size:18px;
-
 }
