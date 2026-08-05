@@ -1,0 +1,51 @@
+<title> sysytemdirect's Blog</title>
+<h1>Welcome to sysytemdirect's Website! </h1>
+<br>
+
+<h2>About Me</h2>   
+<p>Hi, I'm sysytemdirect,a high school student.</p>
+<p>I don't have much free time to write my blog, but I will try to update it as often as possible. I am interested in Linux and hardware, and I hope to share my thoughts and experiences with you through this blog.</p>  
+<p>I'm also a Minecraft player like explore update suppression and redstone machanics.If you'd like to play with me, feel free to contact me!</p>
+
+<h2>Contact Me</h2> 
+<p>You can reach me at <b>sysytemdirect@outlook.com</b> </p>
+<p>Or you can contact me on <b>QQ: 27400889507</b></p>
+<p>Github: <a href="https://github.com/sysytemdirect">click here</a></p>
+
+<h2>My computer</h2>
+<img src="computer.png" alt="My computer" width="600" height="200">
+<p>I also have a Friendlyelect nanopc T4,It is a powerful mini server,I use it to run nginx and frps</p>
+
+<h2>MC Server</h2>
+
+<p>
+online players:
+<span id="mc-online">loading...</span>
+</p>
+
+<script>
+function updateMC(){
+    fetch("https://api.mcsrvstat.us/3/www.sysytemdirect.top:11451")
+    .then(r=>r.json())
+    .then(data=>{
+        if(data.online){
+            document.getElementById("mc-online").innerHTML =
+                data.players.online + "/" + data.players.max;
+        }else{
+            document.getElementById("mc-online").innerHTML =
+                "server offline";
+        }
+    })
+    .catch(err=>{
+
+        document.getElementById("mc-online").innerHTML =
+            "failed to fetch";
+    });
+}
+updateMC();
+setInterval(updateMC,10000);
+</script>
+
+<h2>My Blog</h2>
+<p>click here to go to my blog: <a href="blog/index.html">My Blog</a></p>
+
