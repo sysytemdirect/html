@@ -9,7 +9,7 @@ Posted on August 4, 2026
 
 <p>Recently, I bought a FriendlyElect nanopc T4, and I found that the bluetooth function of the nanopc T4 is not working properly. I tried to connect a bluetooth headset to the nanopc T4, but it has very high latency.</p>
 <p>I tried searching online for solutions, but nothing was found,after several hours of searching,ChatGPT gave me a solution, I tried it and it worked! Here is the solution:</p>
-<p><b><i>I use the <a href="https://www.armbian.com/nanopc-t4/">armbian</a>,If you are using anothe system,please adapt the solution by yourself</b></i></p>
+<p><b><i>BTW,I use the <a href="https://www.armbian.com/nanopc-t4/">armbian</a>,If you are using anothe system,please adapt the solution by yourself</b></i></p>
 <p>First open a terminal and run the following command:</p>
 <pre><code>sudo armbian-config</code></pre>
 <p>Then select "System" and then "Kernel" and then select "Edit device tree" ,select "select and edit a device blob"and then select "nanopc-t4.dtb" and then select "Edit" </p>
@@ -32,3 +32,5 @@ Posted on August 4, 2026
 <p>And change <code>max-speed = "", "=\t";</code> to <code>max-speed = "3000000"</code> and then save the file and exit the editor</p>
 <p>Then reboot the system and try to connect your bluetooth device again, it should work properly</p>
 <p>This is becaue bcm43438 can work up to 3Mbps, but the dts does'nt give the correct speed,if you can check the dmesg you will find the bcm43438 has a error message about the speed,so we need to change dts to config it properly</p>
+
+
