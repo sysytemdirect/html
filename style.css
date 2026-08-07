@@ -1,9 +1,18 @@
 body {
     max-width:900px;
     margin:auto;
-    font-family:
-    Arial, sans-serif;
-    background:#f4f4f4;
+    padding-top:70px;
+    font-family:Arial,sans-serif;
+    background:#def1e6;
+}
+
+
+nav {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#a891dc;
 }
 
 h1 {
@@ -25,3 +34,34 @@ p {
     line-height:1.8;
     font-size:18px;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+	}
