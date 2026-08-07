@@ -41,24 +41,40 @@ online players:
 </p>
 
 <script>
+
 function updateMC(){
-    fetch("https://api.mcsrvstat.us/3/www.sysytemdirect.top:11451")
-    .then(r=>r.json())
-    .then(data=>{
+
+    fetch("https://www.sysytemdirect.top:8999/api/mc")
+
+    .then(r => r.json())
+
+    .then(data => {
+
         if(data.online){
+
             document.getElementById("mc-online").innerHTML =
-                data.players.online + "/" + data.players.max;
+                data.players + "/" + data.max;
+
         }else{
+
             document.getElementById("mc-online").innerHTML =
                 "server offline";
+
         }
+
     })
-    .catch(err=>{
+
+    .catch(err => {
 
         document.getElementById("mc-online").innerHTML =
             "failed to fetch";
+
+        console.log(err);
+
     });
+
 }
+
 updateMC();
 setInterval(updateMC,10000);
 </script>
