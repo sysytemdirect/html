@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <meta charset="utf-8">
+    <title>Status</title>
+</head>
+
+<body>
+
+<iframe
+        id="apiFrame"
+        src="https://www.sysytemdirect.top:8999/api/"
+        width="100%"
+        height="500"
+        frameborder="0">
+</iframe>
+
+<script>
+    const apiFrame = document.getElementById("apiFrame");
+
+    function refreshAPI() {
+        apiFrame.src = "https://www.sysytemdirect.top:8999/api/?t=" + Date.now();
+    }
+
+    setInterval(refreshAPI, 1000);
+</script>
+
+<script src="https://giscus.app/client.js"
+        data-repo="sysytemdirect/html"
+        data-repo-id="R_kgDOTufxiw"
+        data-category="General"
+        data-category-id="DIC_kwDOTufxi84DC3Nr"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+</body>
+</html>
