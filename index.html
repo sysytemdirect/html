@@ -11,6 +11,7 @@
         <li><a href="blog/index.html">Blog</a></li>
         <li><a href="webui/webui.html">Status</a></li>
         <li><a href="https://www.sysytemdirect.top:8990/">Download Server</a></li>
+        <li><a href="preview.html">My computer</a></li>
     </ul>
 </nav>
 
@@ -33,9 +34,9 @@
 
 <h2>My computer</h2>
 <img src="computer.png" alt="My computer" width="800" height="400">
-<p><b>I have no longer use the <a href="https://archlinux.org">Arch Linux</a>,because I don't have much time to
-manager a rolling released linux , and I don't need much newer software,I just want to use a stable,high-porformance and
-user-defined operation system.I chose <a href="https://www.debian.org/">Debian GNU/Linux in the last.</a> </b></p>
+<p><b>I have no longer used the <a href="https://archlinux.org">Arch Linux</a>.Not only don't I have much time to
+manager a rolling released linux , but I also don't need much newer software,I just want to use a stable,high-porformance and
+user-defined operation system.In the last I chose <a href="https://www.debian.org/">Debian GNU/Linux</a>. </b></p>
 <p>I also have a Friendlyelect nanopc T4,It is a powerful mini server,I use it to run nginx and frps</p>
 
 <h2>MC Server</h2>
@@ -48,15 +49,10 @@ online players:
 <script>
 
 function updateMC(){
-
     fetch("https://www.sysytemdirect.top:8999/api/mc")
-
     .then(r => r.json())
-
     .then(data => {
-
         if(data.online){
-
             document.getElementById("mc-online").innerHTML =
                 data.players + "/" + data.max;
 
@@ -64,9 +60,7 @@ function updateMC(){
 
             document.getElementById("mc-online").innerHTML =
                 "server offline";
-
         }
-
     })
 
     .catch(err => {
