@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="../style.css">
     <meta charset="utf-8">
     <title>Status</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <nav>
@@ -12,6 +13,7 @@
         <li><a href="../blog/index.html">Blog</a></li>
         <li><a href="webui.html">Status</a></li>
         <li><a href="https://www.sysytemdirect.top:8990/">Download Server</a></li>
+        <li><a href="../preview.html">My computer</a></li>
     </ul>
 </nav>
 
@@ -24,10 +26,9 @@
         id="apiFrame"
         src="https://www.sysytemdirect.top:8999/api/"
         width="100%"
-        height="500"
+        height="800"
         frameborder="0">
 </iframe>
-
 <script>
     const apiFrame = document.getElementById("apiFrame");
 
@@ -36,6 +37,12 @@
     }
     setInterval(refreshAPI, 1000);
 </script>
+
+<h2>Voltage</h2>
+<canvas id="voltageChart"></canvas>
+<script src="app.js"></script>
+
+
 
 <script src="https://giscus.app/client.js"
         data-repo="sysytemdirect/html"
